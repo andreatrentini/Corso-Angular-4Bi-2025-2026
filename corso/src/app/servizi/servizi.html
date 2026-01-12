@@ -1,1 +1,35 @@
-<p>servizi works!</p>
+<h3 class="display-3">
+    I servizi
+</h3>
+<p>
+    Un servizio è una classe che si differenzia dalle altre per la presenza del decoratore<br>
+    injectable<br>
+        providedIn: 'root'<br>
+    <br>
+    All'avvio dell'applicazione viene creata un'istanza della classe dichiarata injectable e
+    qualsiasi componente o altro servizio nell'applicazione può usare attraverso il meccanismo
+    chiamato dependecy injection.
+</p>
+<div class="row my-5">
+    <div class="col-sm-9">
+        <div>
+            <input type="text" class="form-control" placeholder="Nome..." #inNome>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div>
+            <button class="btn btn-primary" (click)="aggiungiInComponente(inNome.value)">Aggiungi</button>
+        </div>
+    </div>
+</div>
+
+<div class="row my-5">
+    <ul class="list-group">
+        @for(nome of datiComponente(); track $index) {
+            <li class="list-group-item">{{nome}}</li>
+        }
+    </ul>
+</div>
+
+<app-inserimento-nomi></app-inserimento-nomi>
+<app-lista-nomi></app-lista-nomi>
