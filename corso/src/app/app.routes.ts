@@ -5,6 +5,7 @@ import { DirettiveStrutturali } from './direttive-strutturali/direttive-struttur
 import { ClassiInterfacce } from './classi-interfacce/classi-interfacce';
 import { ContenitorePadre } from './comunicazione-fra-componenti/contenitore-padre/contenitore-padre';
 import { NotFound } from './not-found/not-found';
+import { Servizi } from './servizi/servizi';
 
 /*
     L'array routes contiene un elenco di oggetti composti nella forma più semplice
@@ -18,5 +19,6 @@ export const routes: Routes = [
     {path: 'direttive-strutturali', component: DirettiveStrutturali},
     {path: 'classi-interfacce', component: ClassiInterfacce},
     {path: 'com-fra-comp', component: ContenitorePadre},
+    {path: 'servizi', component: Servizi},
     {path: '**', component: NotFound}
 ];
